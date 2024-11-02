@@ -2,16 +2,26 @@
     {
         "namaproduct": "sushi",
         "harga": 5,
-        "image": "/frontend/public/shushi.jpeg"
+        "image": "/frontend/public/gambar/shushi.jpeg"
     },
     {
-        "namaproduct": "Laptop Gaming",
-        "harga": 15000000,
-        "image": "laptop_gaming.png"
+        "namaproduct": "tamagoyaki",
+        "harga": 8,
+        "image": "/frontend/public/gambar/tamagoyaki.jfif"
     },
     {
-        "namaproduct": "Smartphone Terbaru",
-        "harga": 8000000,
-        "image": "smartphone.jpeg"
+        "namaproduct": "udon",
+        "harga": 4,
+        "image": "/frontend/public/gambar/udon.jfif"
+    },
+    {
+        "namaproduct": "tempura",
+        "harga": 15,
+        "image": "/frontend/public/gambar/tempura.jfif"
+    },
+    {
+        "namaproduct": "takoyaki",
+        "harga": 20,
+        "image": "/frontend/public/gambar/takoyaki.jfif"
     }
 ]
