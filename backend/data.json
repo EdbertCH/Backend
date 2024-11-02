@@ -1,0 +1,17 @@
+[
+    {
+        "namaproduct": "Buku Python",
+        "harga": 50000,
+        "image": "buku_python.jpg"
+    },
+    {
+        "namaproduct": "Laptop Gaming",
+        "harga": 15000000,
+        "image": "laptop_gaming.png"
+    },
+    {
+        "namaproduct": "Smartphone Terbaru",
+        "harga": 8000000,
+        "image": "smartphone.jpeg"
+    }
+]
