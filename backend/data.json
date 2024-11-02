@@ -1,8 +1,8 @@
 [
     {
-        "namaproduct": "Buku Python",
-        "harga": 50000,
-        "image": "buku_python.jpg"
+        "namaproduct": "sushi",
+        "harga": 5,
+        "image": "/frontend/public/shushi.jpeg"
     },
     {
         "namaproduct": "Laptop Gaming",
