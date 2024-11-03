@@ -1,0 +1,18 @@
+[
+    {
+        "id":1,
+        "name":"dessert"
+    },
+    {
+        "id":2,
+        "name":"main course"
+    },
+    {
+        "id":3,
+        "name":"drink"
+    },
+    {
+        "id":4,
+        "name":"snack"
+    }
+]
