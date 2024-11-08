@@ -1,0 +1,18 @@
+[
+  {
+    "id": "20ef20dc-ed19-4318-92d4-7ea4d533ddbf",
+    "products": [
+      {
+        "id": 999,
+        "qty": 10
+      },
+      {
+        "id": 998,
+        "qty": 10
+      }
+    ],
+    "payment_type": 1,
+    "customer_name": "Budi",
+    "created_at": "Fri, 08 Nov 2024 17:57:19 GMT"
+  }
+]

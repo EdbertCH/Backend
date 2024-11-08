@@ -19,7 +19,7 @@ const OrderSummary: FC = () => {
             <div className="mt-5 gap-4 flex flex-col h-[35vh] overflow-y-scroll">
                 <div className="border-2 rounded-md p-2 flex">
                     <Image alt="product-image" width="100" height="100" className="rounded-md object-cover w-[10vh] h-[10vh]" src="https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg" />
-                    <div>
+                    <div className="ml-5">
                         <h1 className="text-sm text-gray-800 font-bold">Burger Hantono</h1>
                         <div>
                             <span className="text-[10px] text-[#00932c]">Rp10.000 2x</span>
@@ -29,7 +29,7 @@ const OrderSummary: FC = () => {
                 </div>
                 <div className="border-2 rounded-md p-2 flex">
                     <Image alt="product-image" width="100" height="100" className="rounded-md object-cover w-[10vh] h-[10vh]" src="https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg" />
-                    <div>
+                    <div className="ml-5 ">
                         <h1 className="text-sm text-gray-800 font-bold">Burger Hantono</h1>
                         <div>
                             <span className="text-[10px] text-[#00932c]">Rp10.000 2x</span>
@@ -39,7 +39,7 @@ const OrderSummary: FC = () => {
                 </div>
                 <div className="border-2 rounded-md p-2 flex">
                     <Image alt="product-image" width="100" height="100" className="rounded-md object-cover w-[10vh] h-[10vh]" src="https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg" />
-                    <div>
+                    <div className="ml-5">
                         <h1 className="text-sm text-gray-800 font-bold">Burger Hantono</h1>
                         <div>
                             <span className="text-[10px] text-[#00932c]">Rp10.000 2x</span>
