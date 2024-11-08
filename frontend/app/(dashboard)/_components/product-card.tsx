@@ -38,7 +38,8 @@ const ProductCard: FC<ProductCardProps> = ({ name, price, image, categoryName })
                 )}
                 <h3 className="text-gray-800 font-bold text-sm mt-3">{name}</h3>
                 <div className="flex justify-between">
-                    <span className="text-[#00932c] font-bold text-xs">${price ? price.toLocaleString() : '0.00'}</span>
+                    {/* Format price as USD */}
+                    <span className="text-[#00932c] font-bold text-xs">${price ? price.toFixed(2) : '0.00'}</span>
                     <span className="text-gray-600 text-xs">{categoryName}</span>
                 </div>
             </div>

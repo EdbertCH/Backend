@@ -14,8 +14,8 @@ const handle = nextApp.getRequestHandler();
 const app = express();
 const PORT = 3000;
 
-// Serve static assets from frontend/public directory
-app.use(express.static(path.join(__dirname, '../frontend/public')));
+// Serve images from the "public" folder
+app.use('/gambar', express.static(path.join(__dirname, 'public/gambar')));
 
 nextApp.prepare().then(() => {
   // API route to get all products

@@ -24,10 +24,12 @@ const ProductsPage: React.FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                // Fetch products data
                 const productsResponse = await fetch('http://localhost:3000/api/products');
                 const productsData = await productsResponse.json();
                 setProducts(productsData);
 
+                // Fetch categories data
                 const categoriesResponse = await fetch('http://localhost:3000/api/categories');
                 const categoriesData = await categoriesResponse.json();
                 setCategories(categoriesData);
