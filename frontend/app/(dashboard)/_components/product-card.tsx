@@ -1,40 +1,49 @@
-'use client'
+// frontend/app/_components/product-card.tsx
 
-import Image from "next/image";
-import React, { useState } from "react";
-import { FC } from "react";
-import Condional from "./conditional";
+'use client';
 
-const ProductCard: FC = () => {
-    const [active, setActive] = useState<boolean>(false)
-    const [count, setCount] = useState<number>(1)
+import Image from 'next/image';
+import React, { useState, FC } from 'react';
+import Conditional from './conditional';
 
+interface ProductCardProps {
+    name: string;
+    price: number;
+    image: string;
+    categoryName: string;
+}
+
+const ProductCard: FC<ProductCardProps> = ({ name, price, image, categoryName }) => {
+    const [active, setActive] = useState<boolean>(false);
+    const [count, setCount] = useState<number>(1);
 
     const onButtonPressHandler = () => {
-        setActive(true)
-    }
-
-    
+        setActive(true);
+    };
 
     const setCountHandler = (type: 'inc' | 'dec') => {
-        if (type == 'dec' && count > 1) setCount(prev => prev - 1)
-        if (type == 'inc') setCount(prev => prev + 1)
-    }
-
-
+        if (type == 'dec' && count > 1) setCount((prev) => prev - 1);
+        if (type == 'inc') setCount((prev) => prev + 1);
+    };
 
     return (
         <div className={`rounded-2xl bg-white p-5 shadow-md flex flex-col justify-between ${active && 'border-2 border-[#00932c]'}`}>
             <div>
-                <Image alt="product-image" width="200" height="100" className="rounded-md object-cover" src="https://www.shutterstock.com/image-photo/burger-tomateoes-lettuce-pickles-on-600nw-2309539129.jpg" />
-                <h3 className="text-gray-800 font-bold text-sm mt-3">Burger Mantap Tenan Pedas banget</h3>
+                {image ? (
+                    <Image alt="product-image" width="200" height="100" className="rounded-md object-cover" src={image} />
+                ) : (
+                    <div className="rounded-md bg-gray-200 w-full h-20 flex items-center justify-center">
+                        <span className="text-gray-500 text-sm">No Image Available</span>
+                    </div>
+                )}
+                <h3 className="text-gray-800 font-bold text-sm mt-3">{name}</h3>
                 <div className="flex justify-between">
-                <span className="text-[#00932c] font-bold text-xs">Rp20.000</span>
-                <span className="text-gray-600 text-xs">Street Foot</span>
+                    <span className="text-[#00932c] font-bold text-xs">${price ? price.toLocaleString() : '0.00'}</span>
+                    <span className="text-gray-600 text-xs">{categoryName}</span>
                 </div>
             </div>
 
-            <Condional
+            <Conditional
                 conditional={active}
                 onTrue={
                     <div className="flex justify-between items-center bg-[#EAEDEA] mt-5 py-2 rounded-md px-4">
@@ -48,8 +57,7 @@ const ProductCard: FC = () => {
                 }
             />
         </div>
-    )
-}
+    );
+};
 
-
-export default ProductCard
+export default ProductCard;

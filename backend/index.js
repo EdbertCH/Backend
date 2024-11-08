@@ -1,11 +1,12 @@
 import express from 'express';
 import next from 'next';
 import path from 'path';
-import {fileURLToPath} from 'url';
-import {dirname} from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import fs from 'fs';
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const dev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev, dir: path.join(__dirname, '../frontend') });
 const handle = nextApp.getRequestHandler();
@@ -13,21 +14,42 @@ const handle = nextApp.getRequestHandler();
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, '../frontend/')));
+// Serve static assets from frontend/public directory
+app.use(express.static(path.join(__dirname, '../frontend/public')));
 
 nextApp.prepare().then(() => {
-  app.get('/api/data', (req, res) => {
-    res.sendFile(path.join(__dirname, 'data.json'));
+  // API route to get all products
+  app.get('/api/products', (req, res) => {
+    const dataPath = path.join(__dirname, 'data.json');
+    fs.readFile(dataPath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading products:', err);
+        res.status(500).json({ error: 'Failed to read products' });
+      } else {
+        res.json(JSON.parse(data));
+      }
+    });
   });
 
-  app.get('/api/categori', (req,res)=>{
-    res.sendFile(path.join(__dirname, 'categori.json'));
+  // API route to get all categories
+  app.get('/api/categories', (req, res) => {
+    const categoryPath = path.join(__dirname, 'kategori.json');
+    fs.readFile(categoryPath, 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading categories:', err);
+        res.status(500).json({ error: 'Failed to read categories' });
+      } else {
+        res.json(JSON.parse(data));
+      }
+    });
   });
 
-  app.get('/', (req, res) => {
+  // Serve Next.js frontend for all other routes
+  app.get('*', (req, res) => {
     return handle(req, res);
   });
 
+  // Start the server
   app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
   });
