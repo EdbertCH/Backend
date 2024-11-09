@@ -42,6 +42,13 @@ const OrderSummary: FC<OrderSummaryProps> = ({ cartItems = [] }) => {
 
 
     const onClickHandler = () => {
+        if (chooseProduct?.length == 0){
+            Swal.fire({
+                icon: 'warning',
+                text: 'Kamu belum input product'
+            })
+            return
+        }
         Swal.fire({
             title: 'Buat Orderan Atas nama',
             input: "text",

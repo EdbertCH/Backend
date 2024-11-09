@@ -103,7 +103,36 @@ class OrderController {
                 data: dataLink
             })
         } catch (_) {
-            return res.status(500).json({ data: 'Gagal membaca data.' });
+            return res.status(500).json({ message: 'Gagal membaca data.', data: [] });
+        }
+    }
+
+
+
+    /**
+     * Delete
+     * 
+     * this controller usage params id
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     * @returns 
+     */
+    static delete(req, res) {
+        try {
+            const filePath = path.join(dirname, '../data/order.json');
+            const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+            const { id } = req.params
+
+            const dataFilter = data.filter(data => data.id !== id)
+            fs.writeFileSync(filePath, JSON.stringify(dataFilter, null, 2));
+
+            return res.status(200).json({
+                message: 'Berhasil menghapus data',
+                data: []
+            })
+        } catch(_) {
+            return res.status(500).json({ message: 'Gagal membaca data.', data: [] });
         }
     }
 }

@@ -36,6 +36,7 @@ app.get('/api/category', CategoryController.index)
 // Order Endpoint
 app.post('/api/order', OrderController.store)
 app.get('/api/order', OrderController.index)
+app.delete('/api/order/:id', OrderController.delete)
 
 // Payment Endpoint
 app.get('/api/payment', PaymentController.index)
