@@ -51,20 +51,59 @@ class OrderController {
 
 
 
-    static index (req, res) {
+
+
+    /**
+     * Index Order
+     * Get data list order
+     * 
+     * @param {*} _ 
+     * @param {*} res 
+     * @returns 
+     */
+    static index (_, res) {
         try {
             const filePath = path.join(dirname, '../data/order.json');
+            const filePaythPayment = path.join(dirname, '../data/payment.json');
             const filePathProduct = path.join(dirname, '../data/data.json');
+            const filePathCategory = path.join(dirname, '../data/categori.json');
+            const dataCategory = JSON.parse(fs.readFileSync(filePathCategory, 'utf-8'))
+            const dataPayment = JSON.parse(fs.readFileSync(filePaythPayment, 'utf-8'))
             const dataProduct = JSON.parse(fs.readFileSync(filePathProduct, 'utf-8'));
             let data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
-            data.map(data => {
-                data.products.map(data => {
-                    // return 
+            const dataLink = data.map(data => {
+                const products = data.products.map(data => {
+                    const product = dataProduct.filter(product => {
+                        return product.id == data.id
+                    })[0]
+
+                    product.categori = dataCategory.filter(category => {
+                        return product.categori_id == category.id
+                    })[0]
+
+                    delete product.categori_id
+
+                    return {
+                        qty: data.qty,
+                        product: product
+                    }
                 })
+                return {
+                    ...data,
+                    products,
+                    payment_type: dataPayment.filter(payment => {
+                        return data.payment_type == payment.id
+                    })[0].name
+                }
+            })
+
+            return res.status(200).json({
+                message: 'Berhasil mengambil data',
+                data: dataLink
             })
         } catch (_) {
-
+            return res.status(500).json({ data: 'Gagal membaca data.' });
         }
     }
 }
