@@ -4,4 +4,5 @@ export interface Product {
     image: string
     harga: number
     categori_id: number
+    count?: number
 }

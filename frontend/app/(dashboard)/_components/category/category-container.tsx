@@ -3,6 +3,7 @@
 import React, { FC, useState, useEffect, Suspense } from "react";
 import CategoryCard from "./category-card";
 import { Category } from "../../../../model/Category";
+import { useProductProvider } from "../product/product-provider";
 
 const ICONS = {
     dessert: React.lazy(() => import('react-icons/lia').then(module => ({ default: module.LiaHamburgerSolid }))),
@@ -13,6 +14,7 @@ const ICONS = {
 
 const CategoryContainer: FC = () => {
     const [categories, setCategories] = useState<Category[]>([]);
+    const {  } = useProductProvider()
 
     useEffect(() => {
         console.log(process.env.NEXT_PUBLIC_BACKEND_URL)

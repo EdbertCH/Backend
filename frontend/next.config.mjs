@@ -15,6 +15,12 @@ const nextConfig = {
         hostname: 'www.shutterstock.com',
         pathname: '/**',         // Allows all paths under Shutterstock
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8001',
+        pathname: '/**',
+    },
     ],
   },
 };
