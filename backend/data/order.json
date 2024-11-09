@@ -66,5 +66,41 @@
     "payment_type": "2",
     "customer_name": "buat",
     "created_at": "Sat, 09 Nov 2024 05:03:01 GMT"
+  },
+  {
+    "id": "4e043112-8d30-4495-853f-006f64517af4",
+    "products": [
+      {
+        "id": 998,
+        "qty": 3
+      }
+    ],
+    "payment_type": "2",
+    "customer_name": "ee",
+    "created_at": "Sat, 09 Nov 2024 10:22:22 GMT"
+  },
+  {
+    "id": "74c17a19-6092-4525-8e52-319ecfeaee14",
+    "products": [
+      {
+        "id": 998,
+        "qty": 4
+      },
+      {
+        "id": 997,
+        "qty": 5
+      },
+      {
+        "id": 996,
+        "qty": 3
+      },
+      {
+        "id": 999,
+        "qty": 3
+      }
+    ],
+    "payment_type": "1",
+    "customer_name": "anto",
+    "created_at": "Sat, 09 Nov 2024 10:49:01 GMT"
   }
 ]

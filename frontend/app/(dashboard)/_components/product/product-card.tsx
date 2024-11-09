@@ -3,9 +3,10 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState, FC } from 'react';
+import React, { useState, FC, useEffect } from 'react';
 import Conditional from '../conditional';
 import { Product } from '../../../../model/Product';
+import { useProductProvider } from './product-provider';
 
 interface ProductCardProps {
     product: Product
@@ -18,6 +19,25 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ product, categoryName, onAddToCart, onRemoveFromCart }) => {
     const [count, setCount] = useState<number>(0);
+    const { chooseProduct, nextOrder } = useProductProvider()
+
+
+    useEffect(() => {
+        const data = chooseProduct.filter(
+            data => data.nama == product.nama
+        )
+
+        if (data?.length == 1) {
+            setCount(data[0].count)
+        }
+    }, [chooseProduct])
+
+
+    useEffect(() => {
+        setCount(0)
+    }, [nextOrder])
+
+
 
     const increment = () => {
         onAddToCart(count + 1);

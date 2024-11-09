@@ -14,6 +14,10 @@ interface ProductContextProps {
     setChooseProduct: Function
     filterCategory: number
     setFilterCategory: Function
+    filterName: string
+    setFilterName: Function
+    nextOrder: number,
+    setNextOrder: Function
 }
 
 
@@ -23,11 +27,13 @@ export const useProductProvider = () => useContext(ProductContext)
 
 const ProductProvider: FC = () => {
     const [chooseProduct, setChooseProduct] = useState<Product[]>([])
-    const [filterCategory, setFilterCategory] = useState<number>()
+    const [filterCategory, setFilterCategory] = useState<number>(0)
+    const [filterName, setFilterName] = useState()
+    const [nextOrder, setNextOrder] = useState(0)
 
 
     return (
-        <ProductContext.Provider value={{ chooseProduct, filterCategory, setChooseProduct, setFilterCategory }}>
+        <ProductContext.Provider value={{ chooseProduct, filterCategory, setChooseProduct, setFilterCategory, filterName, setFilterName, nextOrder, setNextOrder }}>
             <div className="flex flex-row w-100">
                 <div className="h-[100vh] overflow-y-scroll">
                     <ProductSearch />

@@ -24,7 +24,7 @@ interface OrderSummaryProps {
 
 const OrderSummary: FC<OrderSummaryProps> = ({ cartItems = [] }) => {
     const total = cartItems.reduce((sum, item) => sum + item.harga * item.quantity, 0);
-    const { setChooseProduct, chooseProduct } = useProductProvider()
+    const { setChooseProduct, chooseProduct, setNextOrder } = useProductProvider()
     const [selectedOption, setSelectedOption] = useState("");
 
 
@@ -67,7 +67,10 @@ const OrderSummary: FC<OrderSummaryProps> = ({ cartItems = [] }) => {
 
                 })
                     .then(res => res.json())
-                    .then(res => setChooseProduct([]))
+                    .then(res => {
+                        setChooseProduct([])
+                        setNextOrder(prev => prev + 1)
+                    })
             }
         })
     }

@@ -5,19 +5,45 @@ import { useProductProvider } from "./product-provider";
 
 const ProductContainer: FC = () => {
     const [products, setProducts] = useState<Product[]>()
-    const { setChooseProduct, chooseProduct } = useProductProvider()
+    const [cacheProduct, setCacheProduct] = useState<Product[]>()
+    const { setChooseProduct, chooseProduct, filterCategory, filterName } = useProductProvider()
 
 
     useEffect(() => {
-        console.log(process.env.NEXT_PUBLIC_BACKEND_URL)
-        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/product')
+        console.log(filterName)
+        if (filterName) {
+            const data = cacheProduct?.filter(
+                data => {
+                    return data.nama.toLowerCase().includes(filterName)
+                }
+            )
+            setProducts(data)
+            const cacheData = chooseProduct
+            setChooseProduct([])
+            setTimeout(() => {
+                setChooseProduct(cacheData)
+            }, 100)
+        } else {
+            setProducts(cacheProduct)
+        }
+    }, [filterName])
+
+
+    useEffect(() => {
+        let queryParams = ''
+
+        if (filterCategory) {
+            queryParams = 'categori_id=' + filterCategory
+        }
+
+        fetch(process.env.NEXT_PUBLIC_BACKEND_URL + '/api/product?' + queryParams)
             .then(res => res.json())
             .then(res => {
-                console.log(res.data)
+                setCacheProduct(res.data)
                 setProducts(res.data)
             })
             .catch(console.error);
-    }, []);
+    }, [filterCategory]);
 
 
 
@@ -88,7 +114,7 @@ const ProductContainer: FC = () => {
                               onRemoveFromCart={(count) => onRemoveFromCartHandler(data, count)}  
                               categoryName={""} 
                               product={data} 
-                              key={idx} />
+                              key={data.nama} />
                         )
                     }
                 )
