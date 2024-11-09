@@ -10,7 +10,6 @@ const ProductContainer: FC = () => {
 
 
     useEffect(() => {
-        console.log(filterName)
         if (filterName) {
             const data = cacheProduct?.filter(
                 data => {
@@ -41,6 +40,11 @@ const ProductContainer: FC = () => {
             .then(res => {
                 setCacheProduct(res.data)
                 setProducts(res.data)
+                setChooseProduct([])
+                setTimeout(() => {
+                    const cacheData = chooseProduct
+                    setChooseProduct(cacheData)
+                }, 100)
             })
             .catch(console.error);
     }, [filterCategory]);
