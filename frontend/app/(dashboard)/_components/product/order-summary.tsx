@@ -92,8 +92,7 @@ const OrderSummary: FC<OrderSummaryProps> = ({ cartItems = [] }) => {
     return (
         <div className="bg-white right-0 bottom-0 h-[100vh] w-[30%] p-5 shadow-lg">
             <div>
-                <h1 className="text-2xl font-bold text-gray-800">Table 4</h1>
-                <span className="font-bold text-base text-gray-800">Yanto</span>
+                <h1 className="text-2xl font-bold text-gray-800">Cart</h1>
             </div>
 
             <div className="mt-5 gap-4 flex flex-col h-[35vh] overflow-y-scroll">
@@ -177,7 +176,7 @@ const OrderSummary: FC<OrderSummaryProps> = ({ cartItems = [] }) => {
                 </label>
             </div>
 
-            <button onClick={onClickHandler} className="bg-[#00932c] p-2 rounded-lg w-[100%] mt-3">Buat Orderan</button>
+            <button onClick={onClickHandler} className="bg-[#00932c] p-2 rounded-lg w-[100%] mt-3">Order</button>
         </div>
     );
 };

@@ -11,7 +11,7 @@ const Sidebar: FC = () => {
     return (
         <div className="bg-white h-[100vh] w-[15%] shadow-lg">
             <div className="text-gray-900 font-bold text-center py-10">
-                Resto Mantap
+                Resto Butter
             </div>
 
             <div className="flex flex-col gap-4">
