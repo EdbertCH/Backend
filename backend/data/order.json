@@ -102,5 +102,29 @@
     "payment_type": "1",
     "customer_name": "anto",
     "created_at": "Sat, 09 Nov 2024 10:49:01 GMT"
+  },
+  {
+    "id": "e5add253-b30b-43a1-8adc-c28976ab4f5f",
+    "products": [
+      {
+        "id": 999,
+        "qty": 3
+      }
+    ],
+    "payment_type": "2",
+    "customer_name": "ahd yuda zaki yamani",
+    "created_at": "Sat, 09 Nov 2024 12:14:56 GMT"
+  },
+  {
+    "id": "5af3acf2-eae2-4d01-bac5-f8f664aff3a8",
+    "products": [
+      {
+        "id": 998,
+        "qty": 3
+      }
+    ],
+    "payment_type": "1",
+    "customer_name": "Sartono",
+    "created_at": "Sat, 09 Nov 2024 12:20:13 GMT"
   }
 ]

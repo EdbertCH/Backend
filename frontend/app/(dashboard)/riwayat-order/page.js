@@ -1,9 +1,9 @@
+import OrderContainer from "./_components/order-container";
 
-export default function RiwayatOrder() {
-    
+export default async function RiwayatOrder() {
     return (
-        <div className="w-[85%] flex">
-            <h1>Riwayat Order</h1>
+        <div className="p-10">
+            <OrderContainer />
         </div>
     );
 }
