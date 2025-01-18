@@ -4,6 +4,14 @@ import OrderController from './controller/order.controller.js';
 import PaymentController from './controller/payment.controller.js';
 import path from 'path';
 import CategoryController from './controller/category.controller.js';
+import session from 'express-session';
+
+app.use(session({
+    secret: 'ini adalah kode secret###', 
+    resave: false, 
+    saveUninitialized: true, 
+    cookie: {maxAge: 60*60*10000}
+}))
 
 const app = express();
 const PORT = 8001;

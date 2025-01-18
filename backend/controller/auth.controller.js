@@ -1,4 +1,4 @@
-import user from '../sequelize/user';
+import user from '../model/user';
 
 class auth{
     static role(req,res){
@@ -14,3 +14,5 @@ class auth{
         }) 
     }
 }
+
+export default auth;
