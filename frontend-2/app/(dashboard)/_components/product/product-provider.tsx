@@ -33,7 +33,7 @@ const ProductProvider: FC = () => {
 
 
     return (
-        <ProductContext.Provider value={{ chooseProduct, filterCategory, setChooseProduct, setFilterCategory, filterName, setFilterName, nextOrder, setNextOrder }}>
+        <ProductContext.Provider value={{ chooseProduct, filterCategory, setChooseProduct, setFilterCategory, filterName: filterName as any, setFilterName, nextOrder, setNextOrder }}>
             <div className="flex flex-row w-100">
                 <div className="h-[100vh] overflow-y-scroll">
                     <ProductSearch />

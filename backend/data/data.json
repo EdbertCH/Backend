@@ -1,274 +1,282 @@
 [
-    {   "id":999,
-        "nama": "anmitsu",
-        "harga": 5.50,
-        "image": "/public/gambar/dessert/anmitsu.jfif",
-        "categori_id" : 1
-    },
-    {
-        "id":998,
-        "nama": "castella",
-        "harga": 7.42,
-        "image": "/public/gambar/dessert/castella.jfif",
-        "categori_id" : 1
-    },
-    {
-        "id":997,
-        "nama": "dongo",
-        "harga": 8.80,
-        "image": "/public/gambar/dessert/dango.jfif",
-        "categori_id" : 1
-    },
-    {
-        "id":996,
-        "nama": "dorayaki",
-        "harga": 12.20,
-        "image":"/public/gambar/dessert/dorayaki.jfif" ,
-        "categori_id" : 1
-    },
-    {
-        "id":995,
-        "nama": "kakigori",
-        "harga": 6.44,
-        "image":"/public/gambar/dessert/kakigori.jfif" ,
-        "categori_id" : 1
-    },
-    {
-        "id":994,
-        "nama": "mochi",
-        "harga": 12.20,
-        "image":"/public/gambar/dessert/mochi.jfif",
-        "categori_id" : 1
-    },
-    {
-        "id":994,
-        "nama": "taiyaki",
-        "harga": 14.31,
-        "image":"/public/gambar/dessert/taiyaki.jfif" ,
-        "categori_id" : 1
-    },
-    {
-        "id":502,
-        "nama":"ayam grepek",
-        "harga":19.22,
-        "image":"/public/gambar/main course/ayam grepek.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":503,
-        "nama":"chicken marsala",
-        "harga":20.50,
-        "image":"/public/gambar/main course/chicken marsala.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":504,
-        "nama":"fettuccine",
-        "harga":15.43,
-        "image":"/public/gambar/main course/fettuccine.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":505,
-        "nama":"katsu",
-        "harga":17.20,
-        "image":"/public/gambar/main course/katsu.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":506,
-        "nama":"macaroni schotel",
-        "harga":13.00,
-        "image":"/public/gambar/main course/macaroni schotel.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":507,
-        "nama":"miso",
-        "harga":8.00,
-        "image":"/public/gambar/main course/miso.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":508,
-        "nama":"spaghetti",
-        "harga":16.50,
-        "image":"/public/gambar/main course/spaghetti.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":509,
-        "nama":"steak",
-        "harga":40.50,
-        "image":"/public/gambar/main course/steak.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":510,
-        "nama":"udon",
-        "harga":15.25,
-        "image":"/public/gambar/main course/udon.jfif",
-        "categori_id": 2
-    },
-    {
-        "id":801,
-        "nama":"alpukat",
-        "harga":10.08,
-        "image":"/public/gambar/drink/alpukat.jfif",
-        "categori_id":3
-    },
-    {
-        "id":802,
-        "nama":"blue ocean",
-        "harga":14.07,
-        "image":"/public/gambar/drink/blue ocean.jfif",
-        "categori_id":3
-    },
-    {
-        "id":803,
-        "nama":"boba",
-        "harga":14.20,
-        "image":"/public/gambar/drink/boba.jfif",
-        "categori_id":3
-    },
-    {
-        "id":804,
-        "nama":"caffe latte",
-        "harga":15.56,
-        "image":"/public/gambar/drink/caffe latte.jfif",
-        "categori_id":3
-    },
-    {
-        "id":805,
-        "nama":"grape juice",
-        "harga":25.84,
-        "image":"/public/gambar/drink/grape juice.jfif",
-        "categori_id":3
-    },
-    {
-        "id":806,
-        "nama":"hot chocolate",
-        "harga":14.00,
-        "image":"/public/gambar/drink/hot chocolate.jfif",
-        "categori_id":3
-    },
-    {
-        "id":807,
-        "nama":"jus wortel",
-        "harga":8.98,
-        "image":"/public/gambar/drink/jus wortel.jfif",
-        "categori_id":3
-    },
-    {
-        "id":808,
-        "nama":"macha drink",
-        "harga":16.45,
-        "image":"/public/gambar/drink/macha-drink.jfif",
-        "categori_id":3
-    },
-    {
-        "id":809,
-        "nama":"orange juice",
-        "harga":12.23,
-        "image":"/public/gambar/drink/orange juice.jfif",
-        "categori_id":3
-    },
-    {
-        "id":810,
-        "nama":"peach juice",
-        "harga": 13.34,
-        "image":"/public/gambar/drink/peace juice.jfif",
-        "categori_id":3
-    },
-    {
-        "id":201,
-        "nama":"cumi goreng",
-        "harga":10.20,
-        "image":"/public/gambar/snack/cumi goreng.jfif",
-        "categori_id":4
-    },
-    {
-        "id":202,
-        "nama":"french fries",
-        "harga":6.34,
-        "image":"/public/gambar/snack/french fries.jfif",
-        "categori_id":4
-    },
-    {
-        "id":203,
-        "nama":"kue lobak",
-        "harga":5.00,
-        "image":"/public/gambar/snack/kue lobak.jfif",
-        "categori_id":4
-    },
-    {
-        "id":204,
-        "nama":"kushiyaki",
-        "harga":7.06,
-        "image":"/public/gambar/snack/kushiyaki.jfif",
-        "categori_id":4
-    },
-    {
-        "id":205,
-        "nama":"leng hong kien",
-        "harga":12.23,
-        "image":"/public/gambar/snack/leng hong kien.jfif",
-        "categori_id":4
-    },
-    {
-        "id":206,
-        "nama":"natto",
-        "harga":5.25,
-        "image":"/public/gambar/snack/natto.jfif",
-        "categori_id":4
-    },
-    {
-        "id":207,
-        "nama":"nugget",
-        "harga":9.00,
-        "image":"/public/gambar/snack/nugget.jfif",
-        "categori_id":4
-    },
-    {
-        "id":208,
-        "nama":"onigiri",
-        "harga":8.23,
-        "image":"/public/gambar/snack/onigiri.jfif",
-        "categori_id":4
-    },
-    {
-        "id":209,
-        "nama":"pangsit goreng",
-        "harga":7.55,
-        "image":"/public/gambar/snack/pangsit goreng.jfif",
-        "categori_id":4
-    },
-    {
-        "id":210,
-        "nama":"sushi",
-        "harga":14.32,
-        "image":"/public/gambar/snack/sushi.jpeg",
-        "categori_id":4
-    },
-    {
-        "id":211,
-        "nama":"takoyaki",
-        "harga":12.56,
-        "image":"/public/gambar/snack/takoyaki.jfif",
-        "categori_id":4
-    },
-    {
-        "id":212,
-        "nama":"tamagoyaki",
-        "harga":8.02,
-        "image":"/public/gambar/snack/tamagoyaki.jfif",
-        "categori_id":4
-    },
-    {
-        "id":213,
-        "nama":"tempura",
-        "harga":13.33,
-        "image":"/public/gambar/snack/tempura.jfif",
-        "categori_id":4
-    }
+  {
+    "id": 999,
+    "nama": "anmitsu",
+    "harga": 5.5,
+    "image": "/public/gambar/dessert/anmitsu.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 998,
+    "nama": "castella",
+    "harga": 7.42,
+    "image": "/public/gambar/dessert/castella.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 997,
+    "nama": "dongo",
+    "harga": 8.8,
+    "image": "/public/gambar/dessert/dango.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 996,
+    "nama": "dorayaki",
+    "harga": 12.2,
+    "image": "/public/gambar/dessert/dorayaki.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 995,
+    "nama": "kakigori",
+    "harga": 6.44,
+    "image": "/public/gambar/dessert/kakigori.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 994,
+    "nama": "mochi",
+    "harga": 12.2,
+    "image": "/public/gambar/dessert/mochi.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 994,
+    "nama": "taiyaki",
+    "harga": 14.31,
+    "image": "/public/gambar/dessert/taiyaki.jfif",
+    "categori_id": 1
+  },
+  {
+    "id": 502,
+    "nama": "ayam grepek",
+    "harga": 19.22,
+    "image": "/public/gambar/main course/ayam grepek.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 503,
+    "nama": "chicken marsala",
+    "harga": 20.5,
+    "image": "/public/gambar/main course/chicken marsala.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 504,
+    "nama": "fettuccine",
+    "harga": 15.43,
+    "image": "/public/gambar/main course/fettuccine.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 505,
+    "nama": "katsu",
+    "harga": 17.2,
+    "image": "/public/gambar/main course/katsu.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 506,
+    "nama": "macaroni schotel",
+    "harga": 13,
+    "image": "/public/gambar/main course/macaroni schotel.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 507,
+    "nama": "miso",
+    "harga": 8,
+    "image": "/public/gambar/main course/miso.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 508,
+    "nama": "spaghetti",
+    "harga": 16.5,
+    "image": "/public/gambar/main course/spaghetti.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 509,
+    "nama": "steak",
+    "harga": 40.5,
+    "image": "/public/gambar/main course/steak.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 510,
+    "nama": "udon",
+    "harga": 15.25,
+    "image": "/public/gambar/main course/udon.jfif",
+    "categori_id": 2
+  },
+  {
+    "id": 801,
+    "nama": "alpukat",
+    "harga": 10.08,
+    "image": "/public/gambar/drink/alpukat.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 802,
+    "nama": "blue ocean",
+    "harga": 14.07,
+    "image": "/public/gambar/drink/blue ocean.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 803,
+    "nama": "boba",
+    "harga": 14.2,
+    "image": "/public/gambar/drink/boba.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 804,
+    "nama": "caffe latte",
+    "harga": 15.56,
+    "image": "/public/gambar/drink/caffe latte.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 805,
+    "nama": "grape juice",
+    "harga": 25.84,
+    "image": "/public/gambar/drink/grape juice.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 806,
+    "nama": "hot chocolate",
+    "harga": 14,
+    "image": "/public/gambar/drink/hot chocolate.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 807,
+    "nama": "jus wortel",
+    "harga": 8.98,
+    "image": "/public/gambar/drink/jus wortel.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 808,
+    "nama": "macha drink",
+    "harga": 16.45,
+    "image": "/public/gambar/drink/macha-drink.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 809,
+    "nama": "orange juice",
+    "harga": 12.23,
+    "image": "/public/gambar/drink/orange juice.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 810,
+    "nama": "peach juice",
+    "harga": 13.34,
+    "image": "/public/gambar/drink/peace juice.jfif",
+    "categori_id": 3
+  },
+  {
+    "id": 201,
+    "nama": "cumi goreng",
+    "harga": 10.2,
+    "image": "/public/gambar/snack/cumi goreng.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 202,
+    "nama": "french fries",
+    "harga": 6.34,
+    "image": "/public/gambar/snack/french fries.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 203,
+    "nama": "kue lobak",
+    "harga": 5,
+    "image": "/public/gambar/snack/kue lobak.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 204,
+    "nama": "kushiyaki",
+    "harga": 7.06,
+    "image": "/public/gambar/snack/kushiyaki.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 205,
+    "nama": "leng hong kien",
+    "harga": 12.23,
+    "image": "/public/gambar/snack/leng hong kien.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 206,
+    "nama": "natto",
+    "harga": 5.25,
+    "image": "/public/gambar/snack/natto.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 207,
+    "nama": "nugget",
+    "harga": 9,
+    "image": "/public/gambar/snack/nugget.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 208,
+    "nama": "onigiri",
+    "harga": 8.23,
+    "image": "/public/gambar/snack/onigiri.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 209,
+    "nama": "pangsit goreng",
+    "harga": 7.55,
+    "image": "/public/gambar/snack/pangsit goreng.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 210,
+    "nama": "sushi",
+    "harga": 14.32,
+    "image": "/public/gambar/snack/sushi.jpeg",
+    "categori_id": 4
+  },
+  {
+    "id": 211,
+    "nama": "takoyaki",
+    "harga": 12.56,
+    "image": "/public/gambar/snack/takoyaki.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 212,
+    "nama": "tamagoyaki",
+    "harga": 8.02,
+    "image": "/public/gambar/snack/tamagoyaki.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 213,
+    "nama": "tempura",
+    "harga": 13.33,
+    "image": "/public/gambar/snack/tempura.jfif",
+    "categori_id": 4
+  },
+  {
+    "id": 40,
+    "nama": "ane",
+    "harga": 33,
+    "image": "/public/gambar/dessert/anmitsu.jfif",
+    "categori_id": 1
+  }
 ]

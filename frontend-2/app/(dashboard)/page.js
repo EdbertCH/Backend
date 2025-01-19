@@ -1,6 +1,16 @@
-import ProductProvider from "./_components/product/product-provider";
+'use client'
 
-export default async function Home() {
+import { useEffect } from "react";
+import ProductProvider from "./_components/product/product-provider";
+import { redirect } from "next/navigation";
+
+export default function Home() {
+
+    useEffect(() => {
+        if (localStorage.getItem('username') === null) {
+            redirect('/login')
+        }
+    }, [])
 
     return (
         <div className="w-[85%] flex">

@@ -46,6 +46,26 @@ class ProductController {
             return res.json({ data: 'Gagal membaca data.' });
         }
     }
+
+
+    static store(req, res) {
+        try {
+            const filePath = path.join(dirname, '../data/data.json');
+            let data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+            const body = req.body;
+            data.push({
+                id: data.length + 1,
+                nama: body.nama,
+                harga: parseInt(body.harga),
+                image: '/public/gambar/dessert/anmitsu.jfif',
+                categori_id: 1
+            });
+            fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+            return res.json({ data: 'Data berhasil disimpan.' });
+        } catch (e) {
+            return res.json({ data: 'Gagal menyimpan data.' });
+        }
+    }
 }
 
 export default ProductController

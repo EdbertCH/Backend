@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { FC } from "react";
-import { usePathname } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import { LiaBuromobelexperte } from "react-icons/lia";
 
 const Sidebar: FC = () => {
@@ -36,6 +36,28 @@ const Sidebar: FC = () => {
                         <Link href="/riwayat-order" className="ml-5 text-left">Riwayat Orderan</Link>
                     </div>
                 </div>
+
+                {
+                    localStorage.getItem("role") === "admin" && (
+                        <div className="px-5">
+                            <div
+                                className={`font-bold text-center items-center flex py-3 rounded-3xl px-3 ${
+                                    currentRoute === "/tambah-barang" ? "bg-[#00932c] text-white" : "text-black"
+                                }`}
+                            >
+                                <LiaBuromobelexperte color={currentRoute === "/tambah-barang" ? "white" : "#00932c"} />
+                                <Link href="/tambah-barang" className="ml-5 text-left">Tambah Barang</Link>
+                            </div>
+                        </div>
+                    )
+                }
+            </div>
+
+            <div className="text-gray-900 font-bold text-center py-10 cursor-pointer text-red-500" onClick={() => {
+                localStorage.clear()
+                redirect('/login')
+            }}>
+                <span className="cursor-pointer">Logout</span>
             </div>
         </div>
     );
